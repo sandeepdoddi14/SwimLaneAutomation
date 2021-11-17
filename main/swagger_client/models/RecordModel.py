@@ -1,44 +1,27 @@
 class RecordPayloadProvider:
-
     def generate_createRecordPayload(self):
         payload = {
             "name": "string",
-            "allowed": [
-                "null"
-            ],
+            "allowed": ["null"],
             "trackingId": 0,
             "trackingFull": "string",
             "applicationId": "string",
-            "referencedRecordIds": [
-                "null"
-            ],
-            "referencedByIds": [
-                "null"
-            ],
-            "matches": [
-                "null"
-            ],
+            "referencedRecordIds": ["null"],
+            "referencedByIds": ["null"],
+            "matches": ["null"],
             "isNew": "true",
             "values": {},
             "repeatFieldCurrentValues": {},
             "valuesDocument": {},
             "actionsExecuted": {},
             "visualizations": {
-                "additionalProp1": [
-                    "null"
-                ],
-                "additionalProp2": [
-                    "null"
-                ],
-                "additionalProp3": [
-                    "null"
-                ]
+                "additionalProp1": ["null"],
+                "additionalProp2": ["null"],
+                "additionalProp3": ["null"],
             },
             "applicationRevision": 0,
             "coeditSession": {
-                "editors": [
-                    "null"
-                ],
+                "editors": ["null"],
                 "recordId": "string",
                 "applicationId": "string",
                 "values": {},
@@ -46,45 +29,28 @@ class RecordPayloadProvider:
                 "modifiedDate": "string",
                 "id": "string",
                 "name": "string",
-                "disabled": "true"
+                "disabled": "true",
             },
             "locked": "true",
-            "lockingUser": {
-                "id": "string",
-                "name": "string"
-            },
+            "lockingUser": {"id": "string", "name": "string"},
             "lockedDate": "string",
             "comments": {
-                "additionalProp1": [
-                    "null"
-                ],
-                "additionalProp2": [
-                    "null"
-                ],
-                "additionalProp3": [
-                    "null"
-                ]
+                "additionalProp1": ["null"],
+                "additionalProp2": ["null"],
+                "additionalProp3": ["null"],
             },
             "createdDate": "string",
             "modifiedDate": "string",
-            "createdByUser": {
-                "id": "string",
-                "name": "string"
-            },
-            "modifiedByUser": {
-                "id": "string",
-                "name": "string"
-            },
+            "createdByUser": {"id": "string", "name": "string"},
+            "modifiedByUser": {"id": "string", "name": "string"},
             "sessionTimeSpent": 0,
             "totalTimeSpent": 0,
             "timeTrackingEnabled": "null",
             "hangfireJobId": "string",
             "isHangfireCreatedAndUnpersisted": "null",
             "infiniteLoopFlag": "null",
-            "latestWorkflowRun": [
-                "null"
-            ],
+            "latestWorkflowRun": ["null"],
             "id": "string",
-            "disabled": "null"
+            "disabled": "null",
         }
         return payload

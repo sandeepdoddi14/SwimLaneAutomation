@@ -1,20 +1,20 @@
 from main.utility.BasePage import BasePage
 from main.pageobjects.locators import CreateNewRecordPageLocators
 
+
 class CreateRecordpage(BasePage):
+    def __init__(self, driver):
+        self.driver = driver
 
-    def __init__(self,driver):
-        self.driver=driver
-
-    def set_firstName(self,firstName):
+    def set_firstName(self, firstName):
         self.getWebElement(CreateNewRecordPageLocators.firstName).clear()
         self.getWebElement(CreateNewRecordPageLocators.firstName).send_keys(firstName)
 
-    def set_lastName(self,lastName):
+    def set_lastName(self, lastName):
         self.getWebElement(CreateNewRecordPageLocators.lastName).clear()
         self.getWebElement(CreateNewRecordPageLocators.lastName).send_keys(lastName)
 
-    def set_city(self,city):
+    def set_city(self, city):
         self.getWebElement(CreateNewRecordPageLocators.city).clear()
         self.getWebElement(CreateNewRecordPageLocators.city).send_keys(city)
 

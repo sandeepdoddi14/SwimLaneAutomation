@@ -1,6 +1,7 @@
 import requests
 from main.utility.ConfigReader import ConfigReader
 
+
 class Recordapi:
     url_postRecord = ConfigReader().getApplicationUrl() + "api/app/"
     url_getRecord = ConfigReader().getApplicationUrl() + "api/app/"
@@ -12,5 +13,5 @@ class Recordapi:
     def get_record(self, appID, recordID):
         return requests.get(self.url_getRecord + appID + "/record/" + recordID)
 
-    def delete_record(self,appID,recordID):
-        return requests.delete(self.url_deleteRecord+appID+"/record"+recordID)
+    def delete_record(self, appID, recordID):
+        return requests.delete(self.url_deleteRecord + appID + "/record" + recordID)

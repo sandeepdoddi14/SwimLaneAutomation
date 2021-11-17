@@ -10,6 +10,7 @@ def test_verifySwimLaneLogo(launch_driver):
     loginPage = LoginPage(driver)
     assert loginPage.isSwimLaneLogoDisplayed() == True
 
+
 def test_loginWithValidCredentials(launch_driver):
     driver = launch_driver
     loginPage = LoginPage(driver)
@@ -19,9 +20,10 @@ def test_loginWithValidCredentials(launch_driver):
     loginPage.click_loginButton()
 
     loginPage.waitForTheElement(CreateNewRecordPageLocators.createNewRecordButton)
-    assert loginPage.isSwimLaneLogoDisplayed()==False
+    assert loginPage.isSwimLaneLogoDisplayed() == False
 
     loginPage.logout()
+
 
 def test_loginWithInvalidUserName(launch_driver):
     driver = launch_driver

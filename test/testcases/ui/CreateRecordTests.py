@@ -1,8 +1,9 @@
-from main.pageobjects.pages.CreateRecordPage import  CreateRecordpage
+from main.pageobjects.pages.CreateRecordPage import CreateRecordpage
+
 
 def test_createNewRecord(launch_driver):
-    driver=launch_driver
-    createRecordPage=CreateRecordpage(driver)
+    driver = launch_driver
+    createRecordPage = CreateRecordpage(driver)
 
     createRecordPage.goToCreateNewRecordPage()
     createRecordPage.set_firstName("sandeep")
@@ -11,6 +12,4 @@ def test_createNewRecord(launch_driver):
     createRecordPage.click_saveButton()
     createRecordPage.click_saveTimeSpent()
 
-    assert createRecordPage.isSaveButtonEnabled()==False
-
-
+    assert createRecordPage.isSaveButtonEnabled() == False
