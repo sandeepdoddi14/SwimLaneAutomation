@@ -1,3 +1,6 @@
+"""
+TEST CONFIGS
+"""
 import time
 from _pytest.fixtures import fixture
 from selenium import webdriver
