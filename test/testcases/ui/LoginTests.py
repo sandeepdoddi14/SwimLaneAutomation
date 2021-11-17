@@ -19,7 +19,7 @@ def test_loginWithValidCredentials(launch_driver):
     loginPage.set_password(UserData().get_password())
     loginPage.click_loginbutton()
 
-    loginPage.wait_for_the_element(CreateNewRecordPageLocators.createNewRecordButton)
+    loginPage.wait_for_the_element(CreateNewRecordPageLocators.CREATE_NEWRECORD_BUTTON)
     assert not loginPage.isswimlanelogo_displayed()
 
     loginPage.logout()

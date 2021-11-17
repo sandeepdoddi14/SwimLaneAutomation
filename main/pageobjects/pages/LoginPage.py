@@ -46,7 +46,7 @@ class LoginPage(BasePage):
         """
         return self.get_web_element(
             LoginPageLocators.loginErrorContainer, self.driver
-        ).text
+        ).TEXT
 
     def navigateto_loginpage(self):
         """
