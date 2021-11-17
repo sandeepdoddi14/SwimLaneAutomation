@@ -1,3 +1,6 @@
+"""
+PAGE OBJECT
+"""
 from main.utility.BasePage import BasePage
 from main.pageobjects.locators import CreateNewRecordPageLocators
 
