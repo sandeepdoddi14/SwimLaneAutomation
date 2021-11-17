@@ -15,8 +15,8 @@ class CreateRecordpage(BasePage):
         :param firstName: string
         :return: void
         """
-        self.get_web_element(CreateNewRecordPageLocators.firstName).clear()
-        self.get_web_element(CreateNewRecordPageLocators.firstName).\
+        self.get_web_element(CreateNewRecordPageLocators.FIRST_NAME).clear()
+        self.get_web_element(CreateNewRecordPageLocators.FIRST_NAME).\
             send_keys(firstName)
 
     def set_lastname(self, lastName):

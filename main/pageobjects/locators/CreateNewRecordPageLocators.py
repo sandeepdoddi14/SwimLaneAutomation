@@ -1,4 +1,4 @@
-firstName = "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[1]/div[" \
+FIRST_NAME = "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[1]/div[" \
             "1]/div/div/div[1]/div/div/div/input "
 lastName = "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[1]/div[" \
            "2]/div/div/div[1]/div/div/div/input "
