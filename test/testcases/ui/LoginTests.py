@@ -30,13 +30,13 @@ def test_loginWithInvalidUserName(launch_driver):
     loginPage = LoginPage(driver)
 
     loginPage.navigateto_loginpage()
-    loginPage.wait_for_the_element(LoginPageLocators.loginButton)
+    loginPage.wait_for_the_element(LoginPageLocators.LOGIN_BUTTON)
 
     loginPage.set_username(UserData().get_username())
     loginPage.set_password(UserData().get_password())
     loginPage.click_loginbutton()
 
-    loginPage.wait_for_the_element(LoginPageLocators.loginErrorContainer)
+    loginPage.wait_for_the_element(LoginPageLocators.LOGIN_ERROR_CONTAINER)
     assert loginPage.get_errormessage().__contains__("Login failed")
 
 
@@ -45,11 +45,11 @@ def test_loginWithInvalidPassword(launch_driver):
     loginPage = LoginPage(driver)
 
     loginPage.navigateto_loginpage()
-    loginPage.wait_for_the_element(LoginPageLocators.loginButton)
+    loginPage.wait_for_the_element(LoginPageLocators.LOGIN_BUTTON)
 
     loginPage.set_username(UserData().get_username())
     loginPage.set_password(UserData().get_password())
     loginPage.click_loginbutton()
 
-    loginPage.wait_for_the_element(LoginPageLocators.loginErrorContainer)
+    loginPage.wait_for_the_element(LoginPageLocators.LOGIN_ERROR_CONTAINER)
     assert loginPage.get_errormessage().__contains__("Login failed")

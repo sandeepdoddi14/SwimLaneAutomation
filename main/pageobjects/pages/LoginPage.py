@@ -18,8 +18,8 @@ class LoginPage(BasePage):
         :param userName: string
         :return: void
         """
-        self.get_web_element(LoginPageLocators.userName, self.driver).clear()
-        self.get_web_element(LoginPageLocators.userName, self.driver).\
+        self.get_web_element(LoginPageLocators.USER_NAME, self.driver).clear()
+        self.get_web_element(LoginPageLocators.USER_NAME, self.driver).\
             send_keys(userName)
 
     def set_password(self, password):
@@ -28,8 +28,8 @@ class LoginPage(BasePage):
         :param password:
         :return: void
         """
-        self.get_web_element(LoginPageLocators.password, self.driver).clear()
-        self.get_web_element(LoginPageLocators.password, self.driver).\
+        self.get_web_element(LoginPageLocators.PASSWORD, self.driver).clear()
+        self.get_web_element(LoginPageLocators.PASSWORD, self.driver).\
             send_keys(password)
 
     def click_loginbutton(self):
@@ -37,7 +37,7 @@ class LoginPage(BasePage):
         clicks on login button
         :return: void
         """
-        self.get_web_element(LoginPageLocators.loginButton, self.driver).click()
+        self.get_web_element(LoginPageLocators.LOGIN_BUTTON, self.driver).click()
 
     def get_errormessage(self) -> string:
         """
@@ -45,7 +45,7 @@ class LoginPage(BasePage):
         :return: string
         """
         return self.get_web_element(
-            LoginPageLocators.loginErrorContainer, self.driver
+            LoginPageLocators.LOGIN_ERROR_CONTAINER, self.driver
         ).TEXT
 
     def navigateto_loginpage(self):
@@ -68,5 +68,5 @@ class LoginPage(BasePage):
         :return: boolean
         """
         return self.get_web_element(
-            LoginPageLocators.swimlaneLogo, self.driver
+            LoginPageLocators.SWIMLANE_LOGO, self.driver
         ).is_displayed()

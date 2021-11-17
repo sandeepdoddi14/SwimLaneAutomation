@@ -1,3 +1,7 @@
+"""
+NEW RECORD PAGE
+LOCATOR PLACE HOLDER
+"""
 FIRST_NAME = "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[1]/div[" \
             "1]/div/div/div[1]/div/div/div/input "
 LAST_NAME = "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[1]/div[" \
