@@ -2,10 +2,8 @@
 TESTS FOR LOGIN PAGE
 """
 import time
-from main.pageobjects.pages.LoginPage import LoginPage
-from main.providers.UserProvider import UserData
-from main.pageobjects.locators import LoginPageLocators
-from main.pageobjects.locators import CreateNewRecordPageLocators
+from pageobjects.pages.login_pom import LoginPage
+from providers.user_provider import UserData
 
 
 def test_verifyswimlanelogo(launch_driver):
