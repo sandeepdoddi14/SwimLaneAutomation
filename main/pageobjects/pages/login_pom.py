@@ -3,12 +3,12 @@ PAGE OBJECT
 """
 import string
 
-from main.utility.BasePage import BasePage
-from main.pageobjects.locators import LoginPageLocators
-from main.utility.ConfigReader import ConfigReader
+from testcases.ui.login_tests import LoginPageLocators
+from utility.configreader import ConfigReader
+from utility import basepage
 
 
-class LoginPage(BasePage):
+class LoginPage(basepage):
     """
     page object for user login page
     """
