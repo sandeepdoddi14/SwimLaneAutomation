@@ -28,7 +28,7 @@ def createrecord():
     APP_ID=response.json()["id"]
 
     createrecordpayload = RecordPayloadProvider.generate_createrecordayload()
-    createrecordresponse = recordapi.post_addRecord(APP_ID, createrecordpayload)
+    createrecordresponse = recordapi.post_addrecord(APP_ID, createrecordpayload)
     global  RECORD_ID
     RECORD_ID = createrecordresponse.json()["applicationId"]
 
