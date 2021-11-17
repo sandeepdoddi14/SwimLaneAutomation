@@ -8,19 +8,19 @@ from main.pageobjects.locators import CreateNewRecordPageLocators
 def test_verifySwimLaneLogo(launch_driver):
     driver = launch_driver
     loginPage = LoginPage(driver)
-    assert loginPage.isSwimLaneLogoDisplayed()
+    assert loginPage.isswimlanelogo_displayed()
 
 
 def test_loginWithValidCredentials(launch_driver):
     driver = launch_driver
     loginPage = LoginPage(driver)
 
-    loginPage.set_userName(UserData().get_username())
+    loginPage.set_username(UserData().get_username())
     loginPage.set_password(UserData().get_password())
-    loginPage.click_loginButton()
+    loginPage.click_loginbutton()
 
     loginPage.wait_for_the_element(CreateNewRecordPageLocators.createNewRecordButton)
-    assert not loginPage.isSwimLaneLogoDisplayed()
+    assert not loginPage.isswimlanelogo_displayed()
 
     loginPage.logout()
 
@@ -29,27 +29,27 @@ def test_loginWithInvalidUserName(launch_driver):
     driver = launch_driver
     loginPage = LoginPage(driver)
 
-    loginPage.navigateto_loginPage()
+    loginPage.navigateto_loginpage()
     loginPage.wait_for_the_element(LoginPageLocators.loginButton)
 
-    loginPage.set_userName(UserData().get_username())
+    loginPage.set_username(UserData().get_username())
     loginPage.set_password(UserData().get_password())
-    loginPage.click_loginButton()
+    loginPage.click_loginbutton()
 
     loginPage.wait_for_the_element(LoginPageLocators.loginErrorContainer)
-    assert loginPage.get_errorMessage().__contains__("Login failed")
+    assert loginPage.get_errormessage().__contains__("Login failed")
 
 
 def test_loginWithInvalidPassword(launch_driver):
     driver = launch_driver
     loginPage = LoginPage(driver)
 
-    loginPage.navigateto_loginPage()
+    loginPage.navigateto_loginpage()
     loginPage.wait_for_the_element(LoginPageLocators.loginButton)
 
-    loginPage.set_userName(UserData().get_username())
+    loginPage.set_username(UserData().get_username())
     loginPage.set_password(UserData().get_password())
-    loginPage.click_loginButton()
+    loginPage.click_loginbutton()
 
     loginPage.wait_for_the_element(LoginPageLocators.loginErrorContainer)
-    assert loginPage.get_errorMessage().__contains__("Login failed")
+    assert loginPage.get_errormessage().__contains__("Login failed")

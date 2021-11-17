@@ -12,7 +12,7 @@ class LoginPage(BasePage):
     def __init__(self, driver):
         self.driver = driver
 
-    def set_userName(self, userName):
+    def set_username(self, userName):
         """
         sets user name
         :param userName: string
@@ -32,14 +32,14 @@ class LoginPage(BasePage):
         self.get_web_element(LoginPageLocators.password, self.driver).\
             send_keys(password)
 
-    def click_loginButton(self):
+    def click_loginbutton(self):
         """
         clicks on login button
         :return: void
         """
         self.get_web_element(LoginPageLocators.loginButton, self.driver).click()
 
-    def get_errorMessage(self) -> string:
+    def get_errormessage(self) -> string:
         """
         retrives error message container
         :return: string
@@ -48,7 +48,7 @@ class LoginPage(BasePage):
             LoginPageLocators.loginErrorContainer, self.driver
         ).text
 
-    def navigateto_loginPage(self):
+    def navigateto_loginpage(self):
         """
         navigate to login page
         :return: void
@@ -62,7 +62,7 @@ class LoginPage(BasePage):
         """
         self.driver.get(ConfigReader().getApplicationUrl() + "logout")
 
-    def isSwimLaneLogoDisplayed(self):
+    def isswimlanelogo_displayed(self):
         """
         checks if logo is displayed
         :return: boolean
