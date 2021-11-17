@@ -1,3 +1,6 @@
+"""
+TESTS
+"""
 from main.providers.UserProvider import UserData
 from main.swagger_client.apis.UserApi import Userapi
 from main.swagger_client.models.UserLoginModel import UserPayloadProvider
