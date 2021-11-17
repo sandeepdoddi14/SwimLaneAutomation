@@ -1,11 +1,10 @@
 """
 PAGE OBJECT
 """
-from testcases.ui.login_tests import CreateNewRecordPageLocators
-from utility import basepage
+from utility.basepage import BasePage
 
 
-class CreateRecordpage(basepage):
+class CreateRecordpage(BasePage):
     """
     Page object for new record creation
     """
