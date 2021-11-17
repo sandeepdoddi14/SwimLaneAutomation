@@ -11,7 +11,7 @@ class UserData:
         with open(self.path, 'r') as file:
             self.prime_service = yaml.safe_load(file)
 
-    def get_userName(self):
+    def get_username(self):
         """
 
         :return: user name

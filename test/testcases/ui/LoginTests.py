@@ -15,7 +15,7 @@ def test_loginWithValidCredentials(launch_driver):
     driver = launch_driver
     loginPage = LoginPage(driver)
 
-    loginPage.set_userName(UserData().get_userName())
+    loginPage.set_userName(UserData().get_username())
     loginPage.set_password(UserData().get_password())
     loginPage.click_loginButton()
 
@@ -32,7 +32,7 @@ def test_loginWithInvalidUserName(launch_driver):
     loginPage.navigateto_loginPage()
     loginPage.wait_for_the_element(LoginPageLocators.loginButton)
 
-    loginPage.set_userName(UserData().get_userName())
+    loginPage.set_userName(UserData().get_username())
     loginPage.set_password(UserData().get_password())
     loginPage.click_loginButton()
 
@@ -47,7 +47,7 @@ def test_loginWithInvalidPassword(launch_driver):
     loginPage.navigateto_loginPage()
     loginPage.wait_for_the_element(LoginPageLocators.loginButton)
 
-    loginPage.set_userName(UserData().get_userName())
+    loginPage.set_userName(UserData().get_username())
     loginPage.set_password(UserData().get_password())
     loginPage.click_loginButton()
 

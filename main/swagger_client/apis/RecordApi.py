@@ -10,32 +10,32 @@ class Recordapi:
     url_getRecord = ConfigReader().getApplicationUrl() + "api/app/"
     url_deleteRecord = ConfigReader().getApplicationUrl() + "api/app/"
 
-    def post_addRecord(self, appID, payload):
+    def post_addRecord(self, app_id, payload):
         """
 
-         :param appID: applicant id
+         :param app_id: applicant id
         :param recordID: record unique id
         :return: response of add record
         """
-        return requests.post(self.url_postRecord + appID + "/record",
+        return requests.post(self.url_postRecord + app_id + "/record",
                              json=payload)
 
-    def get_record(self, appID, recordID):
+    def get_record(self, app_id, record_id):
         """
 
-        :param appID: applicant id
-        :param recordID: record unique id
+        :param app_id: applicant id
+        :param record_id: record unique id
         :return: response of get record
         """
-        return requests.get(self.url_getRecord + appID + "/record/" +
-                            recordID)
+        return requests.get(self.url_getRecord + app_id + "/record/" +
+                            record_id)
 
-    def delete_record(self, appID, recordID):
+    def delete_record(self, app_id, record_id):
         """
 
-        :param appID: applicant id
-        :param recordID: record unique id
+        :param app_id: applicant id
+        :param record_id: record unique id
         :return: response of delete record
         """
-        return requests.delete(self.url_deleteRecord + appID + "/record" +
-                               recordID)
+        return requests.delete(self.url_deleteRecord + app_id + "/record" +
+                               record_id)

@@ -9,7 +9,7 @@ class CreateRecordpage(BasePage):
     def __init__(self, driver):
         self.driver = driver
 
-    def set_firstName(self, firstName):
+    def set_firstname(self, firstName):
         """
         sets first name
         :param firstName: string
@@ -19,7 +19,7 @@ class CreateRecordpage(BasePage):
         self.get_web_element(CreateNewRecordPageLocators.firstName).\
             send_keys(firstName)
 
-    def set_lastName(self, lastName):
+    def set_lastname(self, lastName):
         """
         sets last name
         :param lastName:string
@@ -39,7 +39,7 @@ class CreateRecordpage(BasePage):
         self.get_web_element(CreateNewRecordPageLocators.city).\
             send_keys(city)
 
-    def click_saveButton(self):
+    def click_savebutton(self):
         """
         clicks on save button
         :return: void
@@ -47,14 +47,14 @@ class CreateRecordpage(BasePage):
         self.get_web_element(CreateNewRecordPageLocators.saveButton).\
             click()
 
-    def click_saveTimeSpent(self):
+    def click_savetimespent(self):
         """
         clicks on button
         """
         self.get_web_element(CreateNewRecordPageLocators.saveTimeSpentButton).\
             click()
 
-    def goToCreateNewRecordPage(self):
+    def goto_newrecord_page(self):
         """
         Navigate to new record craetion page
         :return: void
@@ -62,7 +62,7 @@ class CreateRecordpage(BasePage):
         self.get_web_element(CreateNewRecordPageLocators.createNewRecordButton).\
             click()
 
-    def isSaveButtonEnabled(self):
+    def is_savebutton_enabled(self):
         """
         checks for existance
         :return: boolean

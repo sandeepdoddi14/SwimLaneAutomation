@@ -14,7 +14,7 @@ def createRecord():
     loginModel = UserPayloadProvider()
 
     payload = loginModel.generate_loginpayload(
-        UserData().get_userName(), UserData.get_password()
+        UserData().get_username(), UserData.get_password()
     )
     response = userApi.post_userLogin(payload)
     app_id = response.json()["id"]
