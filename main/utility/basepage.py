@@ -24,7 +24,7 @@ class BasePage:
             return driver.find_element(By.ID, locator)
         if locator_strategy.__contains__("class"):
             return driver.find_element(By.CLASS_NAME, locator)
-        elif locator_strategy.__contains__("xpath"):
+        if locator_strategy.__contains__("xpath"):
             return driver.find_element(By.XPATH, locator)
 
     def wait_for_the_element(self, element_locator, driver):
