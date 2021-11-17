@@ -9,9 +9,9 @@ class Recordapi:
     """
     this wrapps record api requests
     """
-    url_postRecord = ConfigReader().getApplicationUrl() + "api/app/"
-    url_getRecord = ConfigReader().getApplicationUrl() + "api/app/"
-    url_deleteRecord = ConfigReader().getApplicationUrl() + "api/app/"
+    url_postRecord = ConfigReader().get_application_url() + "api/app/"
+    url_getRecord = ConfigReader().get_application_url() + "api/app/"
+    url_deleteRecord = ConfigReader().get_application_url() + "api/app/"
 
     def post_addRecord(self, app_id, payload):
         """
