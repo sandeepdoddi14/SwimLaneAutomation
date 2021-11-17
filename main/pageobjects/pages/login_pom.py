@@ -56,14 +56,14 @@ class LoginPage(basepage):
         navigate to login page
         :return: void
         """
-        self.driver.get(ConfigReader().getApplicationUrl() + "login")
+        self.driver.get(ConfigReader().get_application_url() + "login")
 
     def logout(self):
         """
         user log out
         :return: void
         """
-        self.driver.get(ConfigReader().getApplicationUrl() + "logout")
+        self.driver.get(ConfigReader().get_application_url() + "logout")
 
     def isswimlanelogo_displayed(self):
         """
