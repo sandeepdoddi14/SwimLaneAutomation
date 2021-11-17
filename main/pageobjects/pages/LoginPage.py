@@ -12,15 +12,15 @@ class LoginPage(BasePage):
     def __init__(self, driver):
         self.driver = driver
 
-    def set_username(self, userName):
+    def set_username(self, username):
         """
         sets user name
-        :param userName: string
+        :param username: string
         :return: void
         """
         self.get_web_element(LoginPageLocators.USER_NAME, self.driver).clear()
         self.get_web_element(LoginPageLocators.USER_NAME, self.driver).\
-            send_keys(userName)
+            send_keys(username)
 
     def set_password(self, password):
         """

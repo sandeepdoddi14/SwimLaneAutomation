@@ -9,25 +9,25 @@ class CreateRecordpage(BasePage):
     def __init__(self, driver):
         self.driver = driver
 
-    def set_firstname(self, firstName):
+    def set_firstname(self, firstname):
         """
         sets first name
-        :param firstName: string
+        :param firstname: string
         :return: void
         """
         self.get_web_element(CreateNewRecordPageLocators.FIRST_NAME).clear()
         self.get_web_element(CreateNewRecordPageLocators.FIRST_NAME).\
-            send_keys(firstName)
+            send_keys(firstname)
 
-    def set_lastname(self, lastName):
+    def set_lastname(self, lastname):
         """
         sets last name
-        :param lastName:string
+        :param lastname:string
         :return: void
         """
         self.get_web_element(CreateNewRecordPageLocators.LAST_NAME).clear()
         self.get_web_element(CreateNewRecordPageLocators.LAST_NAME).\
-            send_keys(lastName)
+            send_keys(lastname)
 
     def set_city(self, city):
         """
