@@ -13,7 +13,7 @@ class Recordapi:
     url_getRecord = ConfigReader().get_application_url() + "api/app/"
     url_deleteRecord = ConfigReader().get_application_url() + "api/app/"
 
-    def post_addRecord(self, app_id, payload):
+    def post_addrecord(self, app_id, payload):
         """
 
          :param app_id: applicant id
