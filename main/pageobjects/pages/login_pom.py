@@ -1,3 +1,6 @@
+"""
+PAGE OBJECT
+"""
 import string
 
 from main.utility.BasePage import BasePage
