@@ -1,3 +1,6 @@
+"""
+RECORD API REQUESTS
+"""
 import requests
 from main.utility.ConfigReader import ConfigReader
 
