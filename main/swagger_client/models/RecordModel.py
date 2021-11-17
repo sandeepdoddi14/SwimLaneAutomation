@@ -1,5 +1,15 @@
+"""
+Record Api Payload Provider
+"""
 class RecordPayloadProvider:
-    def generate_createRecordPayload(self):
+    """
+    Wraps JSON for record api
+    """
+    def generate_createrecordayload(self):
+        """
+        generate record paylad-create
+        :return: create payload
+        """
         payload = {
             "name": "string",
             "allowed": ["null"],

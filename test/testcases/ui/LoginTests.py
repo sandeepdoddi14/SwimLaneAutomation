@@ -19,7 +19,7 @@ def test_loginWithValidCredentials(launch_driver):
     loginPage.set_password(UserData().get_password())
     loginPage.click_loginButton()
 
-    loginPage.waitForTheElement(CreateNewRecordPageLocators.createNewRecordButton)
+    loginPage.wait_for_the_element(CreateNewRecordPageLocators.createNewRecordButton)
     assert not loginPage.isSwimLaneLogoDisplayed()
 
     loginPage.logout()
@@ -30,13 +30,13 @@ def test_loginWithInvalidUserName(launch_driver):
     loginPage = LoginPage(driver)
 
     loginPage.navigateto_loginPage()
-    loginPage.waitForTheElement(LoginPageLocators.loginButton)
+    loginPage.wait_for_the_element(LoginPageLocators.loginButton)
 
     loginPage.set_userName(UserData().get_userName())
     loginPage.set_password(UserData().get_password())
     loginPage.click_loginButton()
 
-    loginPage.waitForTheElement(LoginPageLocators.loginErrorContainer)
+    loginPage.wait_for_the_element(LoginPageLocators.loginErrorContainer)
     assert loginPage.get_errorMessage().__contains__("Login failed")
 
 
@@ -45,11 +45,11 @@ def test_loginWithInvalidPassword(launch_driver):
     loginPage = LoginPage(driver)
 
     loginPage.navigateto_loginPage()
-    loginPage.waitForTheElement(LoginPageLocators.loginButton)
+    loginPage.wait_for_the_element(LoginPageLocators.loginButton)
 
     loginPage.set_userName(UserData().get_userName())
     loginPage.set_password(UserData().get_password())
     loginPage.click_loginButton()
 
-    loginPage.waitForTheElement(LoginPageLocators.loginErrorContainer)
+    loginPage.wait_for_the_element(LoginPageLocators.loginErrorContainer)
     assert loginPage.get_errorMessage().__contains__("Login failed")

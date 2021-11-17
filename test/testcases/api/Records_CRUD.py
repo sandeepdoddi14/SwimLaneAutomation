@@ -4,8 +4,8 @@ from main.swagger_client.models.UserLoginModel import UserPayloadProvider
 from main.swagger_client.models.RecordModel import RecordPayloadProvider
 from main.swagger_client.apis.RecordApi import Recordapi
 
-global recordID
-global appID
+global record_id
+global app_id
 recordapi = Recordapi()
 
 
@@ -13,24 +13,24 @@ def createRecord():
     userApi = Userapi()
     loginModel = UserPayloadProvider()
 
-    payload = loginModel.generate_loginPayload(
+    payload = loginModel.generate_loginpayload(
         UserData().get_userName(), UserData.get_password()
     )
     response = userApi.post_userLogin(payload)
-    appID = response.json()["id"]
+    app_id = response.json()["id"]
 
-    createRecordPayload = RecordPayloadProvider.generate_createRecordPayload()
-    createRecordResponse = recordapi.post_addRecord(appID, createRecordPayload)
-    recordID = createRecordResponse.json()["applicationId"]
+    createRecordPayload = RecordPayloadProvider.generate_createrecordayload()
+    createRecordResponse = recordapi.post_addRecord(app_id, createRecordPayload)
+    record_id = createRecordResponse.json()["applicationId"]
 
     assert createRecordResponse.status_code == 200
 
 
 def test_getRecord():
-    getRecordResponse = recordapi.get_record(appID, recordID)
+    getRecordResponse = recordapi.get_record(app_id, record_id)
     assert getRecordResponse.status_code == 200
 
 
 def test_deleteRecord():
-    deleteRecordResponse = recordapi.delete_record(appID, recordID)
+    deleteRecordResponse = recordapi.delete_record(app_id, record_id)
     assert deleteRecordResponse.status_code == 200

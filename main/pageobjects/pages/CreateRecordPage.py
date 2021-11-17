@@ -3,36 +3,69 @@ from main.pageobjects.locators import CreateNewRecordPageLocators
 
 
 class CreateRecordpage(BasePage):
+    """
+    Page object for new record creation
+    """
     def __init__(self, driver):
         self.driver = driver
 
     def set_firstName(self, firstName):
-        self.getWebElement(CreateNewRecordPageLocators.firstName).clear()
-        self.getWebElement(CreateNewRecordPageLocators.firstName).\
+        """
+        sets first name
+        :param firstName: string
+        :return: void
+        """
+        self.get_web_element(CreateNewRecordPageLocators.firstName).clear()
+        self.get_web_element(CreateNewRecordPageLocators.firstName).\
             send_keys(firstName)
 
     def set_lastName(self, lastName):
-        self.getWebElement(CreateNewRecordPageLocators.lastName).clear()
-        self.getWebElement(CreateNewRecordPageLocators.lastName).\
+        """
+        sets last name
+        :param lastName:string
+        :return: void
+        """
+        self.get_web_element(CreateNewRecordPageLocators.lastName).clear()
+        self.get_web_element(CreateNewRecordPageLocators.lastName).\
             send_keys(lastName)
 
     def set_city(self, city):
-        self.getWebElement(CreateNewRecordPageLocators.city).clear()
-        self.getWebElement(CreateNewRecordPageLocators.city).\
+        """
+        sets text city
+        :param city: string
+        :return: void
+        """
+        self.get_web_element(CreateNewRecordPageLocators.city).clear()
+        self.get_web_element(CreateNewRecordPageLocators.city).\
             send_keys(city)
 
     def click_saveButton(self):
-        self.getWebElement(CreateNewRecordPageLocators.saveButton).\
+        """
+        clicks on save button
+        :return: void
+        """
+        self.get_web_element(CreateNewRecordPageLocators.saveButton).\
             click()
 
     def click_saveTimeSpent(self):
-        self.getWebElement(CreateNewRecordPageLocators.saveTimeSpentButton).\
+        """
+        clicks on button
+        """
+        self.get_web_element(CreateNewRecordPageLocators.saveTimeSpentButton).\
             click()
 
     def goToCreateNewRecordPage(self):
-        self.getWebElement(CreateNewRecordPageLocators.createNewRecordButton).\
+        """
+        Navigate to new record craetion page
+        :return: void
+        """
+        self.get_web_element(CreateNewRecordPageLocators.createNewRecordButton).\
             click()
 
     def isSaveButtonEnabled(self):
-        return self.getWebElement(CreateNewRecordPageLocators.saveButton).\
+        """
+        checks for existance
+        :return: boolean
+        """
+        return self.get_web_element(CreateNewRecordPageLocators.saveButton).\
             is_displayed()

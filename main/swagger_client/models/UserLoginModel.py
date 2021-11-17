@@ -1,4 +1,17 @@
+"""
+User Payload Provider Module
+"""
 class UserPayloadProvider:
-    def generate_loginPayload(self, username, password):
+    """
+    This Class wraps the user payloads
+    """
+
+    def generate_loginpayload(self, username, password):
+        """
+        wraps login payload
+        :param username: username
+        :param password: password
+        :return: login payload
+        """
         payload = {"userName": username, "password": password}
         return payload
