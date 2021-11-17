@@ -6,7 +6,7 @@ from _pytest.fixtures import fixture
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
-from main.utility.ConfigReader import ConfigReader
+from utility.configreader import ConfigReader
 
 
 @fixture(scope="module", autouse=True)
