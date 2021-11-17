@@ -2,6 +2,11 @@ from main.pageobjects.pages.CreateRecordPage import CreateRecordpage
 
 
 def test_create_newrecord(launch_driver):
+    """
+    creates new record and verifies save button availablity
+    :param launch_driver:
+    :return:
+    """
     driver = launch_driver
     createRecordPage = CreateRecordpage(driver)
 

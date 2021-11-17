@@ -5,13 +5,23 @@ from main.pageobjects.locators import LoginPageLocators
 from main.pageobjects.locators import CreateNewRecordPageLocators
 
 
-def test_verifySwimLaneLogo(launch_driver):
+def test_verifyswimlanelogo(launch_driver):
+    """
+    logo verification
+    :param launch_driver:
+    :return:
+    """
     driver = launch_driver
     loginPage = LoginPage(driver)
     assert loginPage.isswimlanelogo_displayed()
 
 
-def test_loginWithValidCredentials(launch_driver):
+def test_loginwithvalidcredentials(launch_driver):
+    """
+    login withn valid data
+    :param launch_driver:
+    :return:
+    """
     driver = launch_driver
     loginPage = LoginPage(driver)
 
@@ -25,7 +35,12 @@ def test_loginWithValidCredentials(launch_driver):
     loginPage.logout()
 
 
-def test_loginWithInvalidUserName(launch_driver):
+def test_loginwithinvalidusername(launch_driver):
+    """
+    negitive test case
+    :param launch_driver:
+    :return:
+    """
     driver = launch_driver
     loginPage = LoginPage(driver)
 
@@ -40,7 +55,12 @@ def test_loginWithInvalidUserName(launch_driver):
     assert loginPage.get_errormessage().__contains__("Login failed")
 
 
-def test_loginWithInvalidPassword(launch_driver):
+def test_loginwith_invalidpassword(launch_driver):
+    """
+    negitive test case
+    :param launch_driver:
+    :return:
+    """
     driver = launch_driver
     loginPage = LoginPage(driver)
 

@@ -9,7 +9,11 @@ global app_id
 recordapi = Recordapi()
 
 
-def createRecord():
+def createrecord():
+    """
+    creates new record
+    :return:
+    """
     userApi = Userapi()
     loginModel = UserPayloadProvider()
 
@@ -26,11 +30,19 @@ def createRecord():
     assert createRecordResponse.status_code == 200
 
 
-def test_getRecord():
+def test_getrecord():
+    """
+    get record data
+    :return:
+    """
     getRecordResponse = recordapi.get_record(app_id, record_id)
     assert getRecordResponse.status_code == 200
 
 
-def test_deleteRecord():
+def test_deleterecord():
+    """
+    delete record data
+    :return:
+    """
     deleteRecordResponse = recordapi.delete_record(app_id, record_id)
     assert deleteRecordResponse.status_code == 200
