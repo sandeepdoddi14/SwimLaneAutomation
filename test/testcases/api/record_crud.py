@@ -1,11 +1,11 @@
 """
 TESTS
 """
-from main.providers.UserProvider import UserData
-from main.swagger_client.apis.UserApi import Userapi
-from main.swagger_client.models.UserLoginModel import UserPayloadProvider
-from main.swagger_client.models.RecordModel import RecordPayloadProvider
-from main.swagger_client.apis.RecordApi import Recordapi
+from providers.user_provider import UserData
+from swagger_client.apis.record_api import Recordapi
+from swagger_client.apis.user_api import Userapi
+from swagger_client.models.record_model import RecordPayloadProvider
+from swagger_client.models.userlogin_model import UserPayloadProvider
 
 RECORD_ID = ""
 APP_ID = ""
