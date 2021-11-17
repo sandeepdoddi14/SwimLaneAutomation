@@ -1,3 +1,6 @@
+"""
+TESTS FOR CREATE NEW RECORD
+"""
 from main.pageobjects.pages.CreateRecordPage import CreateRecordpage
 
 
