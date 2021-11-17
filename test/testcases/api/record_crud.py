@@ -23,7 +23,7 @@ def createrecord():
     payload = loginmodel.generate_loginpayload(
         UserData().get_username(), UserData.get_password()
     )
-    response = userapi.post_userLogin(payload)
+    response = userapi.post_userlogin(payload)
     global  APP_ID 
     APP_ID=response.json()["id"]
 
