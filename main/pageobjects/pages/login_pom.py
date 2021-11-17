@@ -3,7 +3,7 @@ PAGE OBJECT
 """
 import string
 
-from testcases.ui.login_tests import LoginPageLocators
+from pageobjects.locators import loginpage_locator
 from utility.configreader import ConfigReader
 from utility import basepage
 
@@ -15,14 +15,14 @@ class LoginPage(basepage):
     def __init__(self, driver):
         self.driver = driver
 
-    def set_username(self, username):
+    def set_username(self, username, loginpage_locators=None):
         """
         sets user name
         :param username: string
         :return: void
         """
-        self.get_web_element(LoginPageLocators.USER_NAME, self.driver).clear()
-        self.get_web_element(LoginPageLocators.USER_NAME, self.driver).\
+        self.get_web_element(loginpage_locators.USER_NAME, self.driver).clear()
+        self.get_web_element(loginpage_locators.USER_NAME, self.driver).\
             send_keys(username)
 
     def set_password(self, password):
@@ -31,8 +31,8 @@ class LoginPage(basepage):
         :param password:
         :return: void
         """
-        self.get_web_element(LoginPageLocators.PASSWORD, self.driver).clear()
-        self.get_web_element(LoginPageLocators.PASSWORD, self.driver).\
+        self.get_web_element(loginpage_locator.PASSWORD, self.driver).clear()
+        self.get_web_element(loginpage_locator.PASSWORD, self.driver).\
             send_keys(password)
 
     def click_loginbutton(self):
@@ -40,7 +40,7 @@ class LoginPage(basepage):
         clicks on login button
         :return: void
         """
-        self.get_web_element(LoginPageLocators.LOGIN_BUTTON, self.driver).click()
+        self.get_web_element(loginpage_locator.LOGIN_BUTTON, self.driver).click()
 
     def get_errormessage(self) -> string:
         """
@@ -48,7 +48,7 @@ class LoginPage(basepage):
         :return: string
         """
         return self.get_web_element(
-            LoginPageLocators.LOGIN_ERROR_CONTAINER, self.driver
+            loginpage_locator.LOGIN_ERROR_CONTAINER, self.driver
         ).TEXT
 
     def navigateto_loginpage(self):
@@ -71,5 +71,5 @@ class LoginPage(basepage):
         :return: boolean
         """
         return self.get_web_element(
-            LoginPageLocators.SWIMLANE_LOGO, self.driver
+            loginpage_locator.SWIMLANE_LOGO, self.driver
         ).is_displayed()
