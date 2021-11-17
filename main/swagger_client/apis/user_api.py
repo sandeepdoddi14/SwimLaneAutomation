@@ -11,7 +11,7 @@ class Userapi:
     """
     url_userlogin = ConfigReader().getApplicationUrl() + "api/user/login"
 
-    def post_userLogin(self, payload):
+    def post_userlogin(self, payload):
         """
         posts the payload information
         :param payload: user login payload with data
