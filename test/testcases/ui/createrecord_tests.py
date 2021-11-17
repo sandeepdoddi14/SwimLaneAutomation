@@ -1,7 +1,7 @@
 """
 TESTS FOR CREATE NEW RECORD
 """
-from main.pageobjects.pages.CreateRecordPage import CreateRecordpage
+from pageobjects.pages.createrecord_pom import CreateRecordpage
 
 
 def test_create_newrecord(launch_driver):
