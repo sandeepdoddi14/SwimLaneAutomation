@@ -11,11 +11,13 @@ class LoginPage(BasePage):
 
     def set_userName(self, userName):
         self.getWebElement(LoginPageLocators.userName, self.driver).clear()
-        self.getWebElement(LoginPageLocators.userName, self.driver).send_keys(userName)
+        self.getWebElement(LoginPageLocators.userName, self.driver).\
+            send_keys(userName)
 
     def set_password(self, password):
         self.getWebElement(LoginPageLocators.password, self.driver).clear()
-        self.getWebElement(LoginPageLocators.password, self.driver).send_keys(password)
+        self.getWebElement(LoginPageLocators.password, self.driver).\
+            send_keys(password)
 
     def click_loginButton(self):
         self.getWebElement(LoginPageLocators.loginButton, self.driver).click()

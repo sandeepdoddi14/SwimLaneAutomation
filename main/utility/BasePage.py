@@ -15,10 +15,10 @@ class BasePage:
             return driver.find_element(By.XPATH, locator)
 
     def waitForTheElement(self, element_locator, driver):
-        elementExists = False
-        while elementExists == False:
+        ispresent = False
+        while not ispresent:
             try:
                 self.getWebElement(element_locator, driver)
-                elementExists = True
+                ispresent = True
             except Exception as e:
-                print("Exception cought while Get Element" + e.with_traceback())
+                print("Exception cought while Get Element" + e)

@@ -8,7 +8,7 @@ from main.pageobjects.locators import CreateNewRecordPageLocators
 def test_verifySwimLaneLogo(launch_driver):
     driver = launch_driver
     loginPage = LoginPage(driver)
-    assert loginPage.isSwimLaneLogoDisplayed() == True
+    assert loginPage.isSwimLaneLogoDisplayed()
 
 
 def test_loginWithValidCredentials(launch_driver):
@@ -20,7 +20,7 @@ def test_loginWithValidCredentials(launch_driver):
     loginPage.click_loginButton()
 
     loginPage.waitForTheElement(CreateNewRecordPageLocators.createNewRecordButton)
-    assert loginPage.isSwimLaneLogoDisplayed() == False
+    assert not loginPage.isSwimLaneLogoDisplayed()
 
     loginPage.logout()
 

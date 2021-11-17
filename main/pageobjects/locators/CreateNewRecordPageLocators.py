@@ -1,6 +1,9 @@
-firstName = "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[1]/div[1]/div/div/div[1]/div/div/div/input"
-lastName = "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[1]/div[2]/div/div/div[1]/div/div/div/input"
-streetAdress = "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[2]/div[1]/div/div/div[1]/div/div/div/textarea"
+firstName = "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[1]/div[" \
+            "1]/div/div/div[1]/div/div/div/input "
+lastName = "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[1]/div[" \
+           "2]/div/div/div[1]/div/div/div/input "
+streetAddress = "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[2]/div[" \
+               "1]/div/div/div[1]/div/div/div/textarea "
 city = (
     "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[2]/div["
     "2]/div/div/div[1]/div/div/div/input "
@@ -13,7 +16,7 @@ telephone = (
     "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[3]/div["
     "2]/div/div/div[1]/div/div/div/input "
 )
-zip = (
+zipcode = (
     "xpath,/html/body/div[1]/div/div/ui-view/section/div[1]/form/div/div[1]/div/div/div[2]/div[4]/div[1]/div/div/div["
     "1]/div/div/input "
 )
