@@ -1,3 +1,6 @@
+"""
+TESTS FOR LOGIN PAGE
+"""
 import time
 from main.pageobjects.pages.LoginPage import LoginPage
 from main.providers.UserProvider import UserData
