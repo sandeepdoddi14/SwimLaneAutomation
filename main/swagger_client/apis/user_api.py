@@ -9,7 +9,7 @@ class Userapi:
     """
     Class contains requests wrapped for user api
     """
-    url_userlogin = ConfigReader().getApplicationUrl() + "api/user/login"
+    url_userlogin = ConfigReader().get_application_url() + "api/user/login"
 
     def post_userlogin(self, payload):
         """
