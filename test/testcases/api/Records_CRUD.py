@@ -4,8 +4,8 @@ from main.swagger_client.models.UserLoginModel import UserPayloadProvider
 from main.swagger_client.models.RecordModel import RecordPayloadProvider
 from main.swagger_client.apis.RecordApi import Recordapi
 
-global record_id
-global app_id
+RECORD_ID = ""
+APP_ID = ""
 recordapi = Recordapi()
 
 
@@ -14,20 +14,22 @@ def createrecord():
     creates new record
     :return:
     """
-    userApi = Userapi()
-    loginModel = UserPayloadProvider()
+    userapi = Userapi()
+    loginmodel = UserPayloadProvider()
 
-    payload = loginModel.generate_loginpayload(
+    payload = loginmodel.generate_loginpayload(
         UserData().get_username(), UserData.get_password()
     )
-    response = userApi.post_userLogin(payload)
-    app_id = response.json()["id"]
+    response = userapi.post_userLogin(payload)
+    global  APP_ID 
+    APP_ID=response.json()["id"]
 
-    createRecordPayload = RecordPayloadProvider.generate_createrecordayload()
-    createRecordResponse = recordapi.post_addRecord(app_id, createRecordPayload)
-    record_id = createRecordResponse.json()["applicationId"]
+    createrecordpayload = RecordPayloadProvider.generate_createrecordayload()
+    createrecordresponse = recordapi.post_addRecord(APP_ID, createrecordpayload)
+    global  RECORD_ID
+    RECORD_ID = createrecordresponse.json()["applicationId"]
 
-    assert createRecordResponse.status_code == 200
+    assert createrecordresponse.status_code == 200
 
 
 def test_getrecord():
@@ -35,8 +37,8 @@ def test_getrecord():
     get record data
     :return:
     """
-    getRecordResponse = recordapi.get_record(app_id, record_id)
-    assert getRecordResponse.status_code == 200
+    getrecordresponse = recordapi.get_record(APP_ID, RECORD_ID)
+    assert getrecordresponse.status_code == 200
 
 
 def test_deleterecord():
@@ -44,5 +46,5 @@ def test_deleterecord():
     delete record data
     :return:
     """
-    deleteRecordResponse = recordapi.delete_record(app_id, record_id)
-    assert deleteRecordResponse.status_code == 200
+    deleterecordresponse = recordapi.delete_record(APP_ID, RECORD_ID)
+    assert deleterecordresponse.status_code == 200

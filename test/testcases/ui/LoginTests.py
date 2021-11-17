@@ -12,8 +12,8 @@ def test_verifyswimlanelogo(launch_driver):
     :return:
     """
     driver = launch_driver
-    loginPage = LoginPage(driver)
-    assert loginPage.isswimlanelogo_displayed()
+    loginpage = LoginPage(driver)
+    assert loginpage.isswimlanelogo_displayed()
 
 
 def test_loginwithvalidcredentials(launch_driver):
@@ -23,16 +23,16 @@ def test_loginwithvalidcredentials(launch_driver):
     :return:
     """
     driver = launch_driver
-    loginPage = LoginPage(driver)
+    loginpage = LoginPage(driver)
 
-    loginPage.set_username(UserData().get_username())
-    loginPage.set_password(UserData().get_password())
-    loginPage.click_loginbutton()
+    loginpage.set_username(UserData().get_username())
+    loginpage.set_password(UserData().get_password())
+    loginpage.click_loginbutton()
 
-    loginPage.wait_for_the_element(CreateNewRecordPageLocators.CREATE_NEWRECORD_BUTTON)
-    assert not loginPage.isswimlanelogo_displayed()
+    loginpage.wait_for_the_element(CreateNewRecordPageLocators.CREATE_NEWRECORD_BUTTON)
+    assert not loginpage.isswimlanelogo_displayed()
 
-    loginPage.logout()
+    loginpage.logout()
 
 
 def test_loginwithinvalidusername(launch_driver):
@@ -42,17 +42,17 @@ def test_loginwithinvalidusername(launch_driver):
     :return:
     """
     driver = launch_driver
-    loginPage = LoginPage(driver)
+    loginpage = LoginPage(driver)
 
-    loginPage.navigateto_loginpage()
-    loginPage.wait_for_the_element(LoginPageLocators.LOGIN_BUTTON)
+    loginpage.navigateto_loginpage()
+    loginpage.wait_for_the_element(LoginPageLocators.LOGIN_BUTTON)
 
-    loginPage.set_username(UserData().get_username())
-    loginPage.set_password(UserData().get_password())
-    loginPage.click_loginbutton()
+    loginpage.set_username(UserData().get_username())
+    loginpage.set_password(UserData().get_password())
+    loginpage.click_loginbutton()
 
-    loginPage.wait_for_the_element(LoginPageLocators.LOGIN_ERROR_CONTAINER)
-    assert loginPage.get_errormessage().__contains__("Login failed")
+    loginpage.wait_for_the_element(LoginPageLocators.LOGIN_ERROR_CONTAINER)
+    assert loginpage.get_errormessage().__contains__("Login failed")
 
 
 def test_loginwith_invalidpassword(launch_driver):
@@ -62,14 +62,14 @@ def test_loginwith_invalidpassword(launch_driver):
     :return:
     """
     driver = launch_driver
-    loginPage = LoginPage(driver)
+    loginpage = LoginPage(driver)
 
-    loginPage.navigateto_loginpage()
-    loginPage.wait_for_the_element(LoginPageLocators.LOGIN_BUTTON)
+    loginpage.navigateto_loginpage()
+    loginpage.wait_for_the_element(LoginPageLocators.LOGIN_BUTTON)
 
-    loginPage.set_username(UserData().get_username())
-    loginPage.set_password(UserData().get_password())
-    loginPage.click_loginbutton()
+    loginpage.set_username(UserData().get_username())
+    loginpage.set_password(UserData().get_password())
+    loginpage.click_loginbutton()
 
-    loginPage.wait_for_the_element(LoginPageLocators.LOGIN_ERROR_CONTAINER)
-    assert loginPage.get_errormessage().__contains__("Login failed")
+    loginpage.wait_for_the_element(LoginPageLocators.LOGIN_ERROR_CONTAINER)
+    assert loginpage.get_errormessage().__contains__("Login failed")

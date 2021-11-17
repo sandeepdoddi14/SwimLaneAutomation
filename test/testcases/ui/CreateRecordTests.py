@@ -8,13 +8,13 @@ def test_create_newrecord(launch_driver):
     :return:
     """
     driver = launch_driver
-    createRecordPage = CreateRecordpage(driver)
+    createrecordpage = CreateRecordpage(driver)
 
-    createRecordPage.goto_newrecord_page()
-    createRecordPage.set_firstname("sandeep")
-    createRecordPage.set_lastname("kumar")
-    createRecordPage.set_city("vizag")
-    createRecordPage.click_savebutton()
-    createRecordPage.click_savetimespent()
+    createrecordpage.goto_newrecord_page()
+    createrecordpage.set_firstname("sandeep")
+    createrecordpage.set_lastname("kumar")
+    createrecordpage.set_city("vizag")
+    createrecordpage.click_savebutton()
+    createrecordpage.click_savetimespent()
 
-    assert not createRecordPage.is_savebutton_enabled()
+    assert not createrecordpage.is_savebutton_enabled()
