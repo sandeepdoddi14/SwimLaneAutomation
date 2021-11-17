@@ -5,10 +5,10 @@ import string
 
 from pageobjects.locators import loginpage_locator
 from utility.configreader import ConfigReader
-from utility import basepage
+from utility.basepage import BasePage
 
 
-class LoginPage(basepage):
+class LoginPage(BasePage):
     """
     page object for user login page
     """
