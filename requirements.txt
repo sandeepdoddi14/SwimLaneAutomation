@@ -1,0 +1,9 @@
+requests
+pylint
+pip
+setuptools
+wrapt
+selenium
+yaml
+
+
